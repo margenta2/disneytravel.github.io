@@ -1,9 +1,5 @@
-'use strict';
-
-module.exports = {
-  up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert('Hotels', [
-      {
+const hotels = [
+    {
         name: "Animal Kingdom Lodge",
         address: "2901 Osceola Parkway, Lake Buena Vista FL 32830",
         transportation: "Bus",
@@ -63,15 +59,6 @@ module.exports = {
         transportation: "Bus",
         category: "Moderate",
       }
-    ], {})
-  },
+    ];
 
-  down: async (queryInterface, Sequelize) => {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
-  }
-};
+    module.exports = hotels;
