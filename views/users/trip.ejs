@@ -15,7 +15,8 @@
         <a href="/parks">Explore Parks</a>
     </nav>
     
-    <div>
+    <form action="users/profile/<%= userId %>/trip/new?_method=PUT" method="POST">
+        <div>
         <label>My Disney Hotel</label>
         <select type="dropdown" name="hotel name" placeholder="Select your Hotel">
             <option style="display:none"> -- select hotel --</option>
@@ -34,6 +35,8 @@
                 <% } %>
         </select>
     </div>
+    <input type="submit" value="Submit"/>
+    </form>
 
 </body>
 </html>

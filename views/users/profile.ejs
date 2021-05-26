@@ -11,14 +11,41 @@
     <h1>Welcome <%=user.name%></h1>
 
     <nav>
-        <a href="/">My Disney Trip</a>
+        <a href="/users/profile/<%=user.id%>/trip">My Disney Trip</a>
     </nav>
 
     <form action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
         Name: <input type="text" name="name" value=<%=user.name%> /> <br> <br>
         Username: <input type="text" name="username" value=<%=user.username%> /> <br> <br>
         Password: <input type="password" name="password" value=<%=user.password%> <br> <br>
-        <input type="submit" value="Edit Profile" />
+        <div>
+            <label>My Disney Hotel</label>
+            <select type="dropdown" name="hotelId" placeholder="Select your Hotel" selected="<%= user.hotelId %>">
+                <option style="display:none"> -- select hotel --</option>
+                <% for (let i = 0; i < hotels.length; i++) { %>
+                    <% if (hotels[i].id === user.hotelId) { %>
+                        <option selected="selected" value="<%= hotels[i].id %>"><%= hotels[i].name %></option>
+                  <%  } else { %>
+                        <option value="<%= hotels[i].id %>"><%= hotels[i].name %></option> 
+                   <% } %>
+                    <% } %>
+            </select>
+        </div>
+    
+        <div>
+            <label>My Disney Park</label>
+            <select type="dropdown" name="parkId" placeholder="Select your Park" selected="<%= user.parkId%>">
+                <option style="display:none"> -- select park --</option>
+                <% for (let i = 0; i < parks.length; i++) { %>
+                    <% if (parks[i].id === user.parkId) { %>
+                        <option selected="selected" value="<%= parks[i].id %>"><%= parks[i].name %></option>
+                  <%  } else { %>
+                        <option value="<%= parks[i].id %>"><%= parks[i].name %></option> 
+                   <% } %>
+                    <% } %>
+            </select>
+        </div>
+        <input type="submit" value="Submit Changes" />
     </form>
     <br>
     <form action="/users/<%=user.id%>?_method=DELETE" method="POST">

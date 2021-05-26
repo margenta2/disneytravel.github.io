@@ -1,4 +1,6 @@
 const User = require('../models').User;
+const Hotel = require('../models').Hotel;
+const Park = require('../models').Park;
 
 const index = (req, res) => {
     res.render('users/index.ejs')
@@ -10,6 +12,7 @@ const renderSignup = (req, res) => {
 
 
 const signup = (req, res) => {
+    console.log(req.body)
     User.create(req.body)
     .then(newUser => {
         res.redirect(`users/profile/${newUser.id}`);
@@ -35,9 +38,19 @@ const login = (req, res) => {
 const renderProfile = (req,res) => {
     User.findByPk(req.params.index)
     .then(userProfile => {
-        res.render('users/profile.ejs', {
-            user: userProfile
+        console.log(userProfile)
+        Hotel.findAll()
+        .then(allHotels => {
+            Park.findAll()
+            .then(allParks => {
+                res.render('users/profile.ejs', {
+                    user: userProfile,
+                    hotels: allHotels,
+                    parks: allParks
+                })
+            })
         })
+       
     })
 }
 
@@ -51,7 +64,9 @@ const renderParks = (req,res) => {
     res.render('/index.ejs')
 }
 
+
 const editProfile = (req, res) => {
+    console.log(req.body)
     User.update(req.body, {
         where: {
             id: req.params.index
@@ -74,6 +89,7 @@ const deleteUser = (req, res) => {
     })
 }
 
+
 module.exports = {
     index,
     renderSignup,
@@ -84,5 +100,7 @@ module.exports = {
     editProfile,
     deleteUser,
     renderHotels,
-    renderParks
+    renderParks,
+ 
+
 }
