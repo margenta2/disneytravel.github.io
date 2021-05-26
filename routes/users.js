@@ -6,6 +6,8 @@ router.get('/', ctrl.users.index);
 router.get('/signup', ctrl.users.renderSignup);
 router.get('/profile/:index', ctrl.users.renderProfile);
 router.get('/login', ctrl.users.renderLogin);
+router.get('/hotels', ctrl.users.renderHotels);
+router.get('/parks', ctrl.users.renderParks);
 
 router.post('/', ctrl.users.signup);
 

@@ -8,6 +8,7 @@ const renderSignup = (req, res) => {
     res.render('users/signup.ejs')
 }
 
+
 const signup = (req, res) => {
     User.create(req.body)
     .then(newUser => {
@@ -40,6 +41,16 @@ const renderProfile = (req,res) => {
     })
 }
 
+
+//Do I need to put index.ejs here?
+const renderHotels = (req,res) => {
+    res.render('/index.ejs')
+}
+
+const renderParks = (req,res) => {
+    res.render('/index.ejs')
+}
+
 const editProfile = (req, res) => {
     User.update(req.body, {
         where: {
@@ -68,5 +79,7 @@ module.exports = {
     login,
     renderProfile,
     editProfile,
-    deleteUser
+    deleteUser,
+    renderHotels,
+    renderParks
 }
