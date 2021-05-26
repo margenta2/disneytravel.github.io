@@ -69,6 +69,9 @@ const deleteUser = (req, res) => {
             id: req.params.index
         }
     })
+    .then(() => {
+        res.redirect('/users');
+    })
 }
 
 module.exports = {
