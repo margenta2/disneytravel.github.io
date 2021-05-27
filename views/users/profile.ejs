@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
-    <link rel="stylesheet" type='text/css' href="css/style.css"/>
+    <link rel="stylesheet" type='text/css' href="../../css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>Welcome <%=user.name%></h1>
+    <h1>Welcome <%=user.name%>
+    </h1>
 
     <nav>
-        <a href="/hotels">Explore Hotels</a>
-        <a href="/parks">Explore Parks</a>
+        <a class="btn" href="/hotels">Explore Hotels</a>
+        <a class="btn" href="/parks">Explore Parks</a>
     </nav>
 
-    <form action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
+    <form class="profile-form" action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
         Name: <input type="text" name="name" value=<%=user.name%> /> <br> <br>
         Username: <input type="text" name="username" value=<%=user.username%> /> <br> <br>
         Password: <input type="password" name="password" value=<%=user.password%> <br> <br>
@@ -25,34 +28,43 @@
             <label>My Disney Hotel</label>
             <select type="dropdown" name="hotelId" placeholder="Select your Hotel" selected="<%= user.hotelId %>">
                 <option style="display:none"> -- select hotel --</option>
-                <% for (let i = 0; i < hotels.length; i++) { %>
-                    <% if (hotels[i].id === user.hotelId) { %>
-                        <option selected="selected" value="<%= hotels[i].id %>"><%= hotels[i].name %></option>
-                  <%  } else { %>
-                        <option value="<%= hotels[i].id %>"><%= hotels[i].name %></option> 
-                   <% } %>
-                    <% } %>
+                <% for (let i=0; i < hotels.length; i++) { %>
+                    <% if (hotels[i].id===user.hotelId) { %>
+                        <option selected="selected" value="<%= hotels[i].id %>">
+                            <%= hotels[i].name %>
+                        </option>
+                        <% } else { %>
+                            <option value="<%= hotels[i].id %>">
+                                <%= hotels[i].name %>
+                            </option>
+                            <% } %>
+                                <% } %>
             </select>
         </div>
-    
+
         <div class="myPark">
             <label>My Disney Park</label>
             <select type="dropdown" name="parkId" placeholder="Select your Park" selected="<%= user.parkId%>">
                 <option style="display:none"> -- select park --</option>
-                <% for (let i = 0; i < parks.length; i++) { %>
-                    <% if (parks[i].id === user.parkId) { %>
-                        <option selected="selected" value="<%= parks[i].id %>"><%= parks[i].name %></option>
-                  <%  } else { %>
-                        <option value="<%= parks[i].id %>"><%= parks[i].name %></option> 
-                   <% } %>
-                    <% } %>
+                <% for (let i=0; i < parks.length; i++) { %>
+                    <% if (parks[i].id===user.parkId) { %>
+                        <option selected="selected" value="<%= parks[i].id %>">
+                            <%= parks[i].name %>
+                        </option>
+                        <% } else { %>
+                            <option value="<%= parks[i].id %>">
+                                <%= parks[i].name %>
+                            </option>
+                            <% } %>
+                                <% } %>
             </select>
         </div>
         <input type="submit" value="Submit Changes" />
     </form>
     <br>
-    <form action="/users/<%=user.id%>?_method=DELETE" method="POST">
+    <form class="profile-form" action="/users/<%=user.id%>?_method=DELETE" method="POST">
         <input type="submit" value="Delete User" />
     </form>
 </body>
+
 </html>

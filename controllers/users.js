@@ -63,7 +63,6 @@ const renderParks = (req,res) => {
 
 
 const editProfile = (req, res) => {
-    // console.log(req.body)
     User.update(req.body, {
         where: {
             id: req.params.index

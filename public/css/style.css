@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    border: 2px black solid;
 
 }
 
@@ -9,17 +10,13 @@
 }
 
 body {
-    background-color: #76d0c0;
+    background-image: url("../../images/disney-background.jpg");
+    /* background-color: #76d0c0; */
     font-family: 'Baloo 2', cursive;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
-
-/* .hotel-container {
-    background-color: #fbbe4f;
-
-
-} */
 
 .hotels {
     background-color: #4a62d8;
@@ -35,9 +32,9 @@ body {
 
 .hotel-header {
     text-align: center;
-    font-family: disneyFont;
-    font-size: large;
-    color: #4a62d8;
+    font-size: 36px;
+    color: #fbbe4f;
+    background-color: #8f3985;
 }
 
 .btn {
@@ -47,12 +44,14 @@ body {
     border-color: #4a62d8;
     background-color: #fbbe4f;
     color: #4a62d8;
+    padding: 3px;
 }
 
 #hotel-btn {
     text-decoration: center;
     padding: 2px;
     margin: 10px;
+    display: flex;
     justify-content: center;
 }
 
@@ -72,4 +71,29 @@ body {
     text-align: center;
     color: #4a62d8;
     font-size: 30px;
+}
+
+.disneyHome {
+    text-align: center;
+    color: #4a62d8;
+    font-size: 36px;
+    font-family: 'disneyFont';
+}
+
+.home-btn {
+    margin: 20 px;
+}
+
+.home-container {
+    flex-direction: column;
+    
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-form {
+    margin: 10px;
 }
