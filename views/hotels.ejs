@@ -6,21 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Page</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" type='text/css' href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Disney Resort Hotels</h1>
+    <h1 class="hotel-header">Disney Resort Hotels</h1>
     <nav>
-        <a href="/users">Return to Trip Planner</a>
+        <a class="btn" id="hotel-btn" href="/users">Return to Trip Planner</a>
     </nav>
-    <div>
+    <div class="hotel-container">
         <% for (let i=0; i < hotels.length; i++) { %>
-            <div>
-                <p><%=hotels[i].name%></p>
-                <p><%=hotels[i].address%></p>
-                <p><%=hotels[i].transportation%></p>
-                <p><%=hotels[i].category%></p>
+            <div class="hotels">
+                <p>Resort Name: <%=hotels[i].name%></p>
+                <p>Address: <%=hotels[i].address%></p>
+                <p>Transportation Options: <%=hotels[i].transportation%></p>
+                <p>Resort Category: <%=hotels[i].category%></p>
             </div>
             <% } %>
         </div>

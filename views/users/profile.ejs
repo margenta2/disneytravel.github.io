@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" type='text/css' href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Welcome <%=user.name%></h1>
@@ -19,7 +21,7 @@
         Name: <input type="text" name="name" value=<%=user.name%> /> <br> <br>
         Username: <input type="text" name="username" value=<%=user.username%> /> <br> <br>
         Password: <input type="password" name="password" value=<%=user.password%> <br> <br>
-        <div>
+        <div class="myHotel">
             <label>My Disney Hotel</label>
             <select type="dropdown" name="hotelId" placeholder="Select your Hotel" selected="<%= user.hotelId %>">
                 <option style="display:none"> -- select hotel --</option>
@@ -33,7 +35,7 @@
             </select>
         </div>
     
-        <div>
+        <div class="myPark">
             <label>My Disney Park</label>
             <select type="dropdown" name="parkId" placeholder="Select your Park" selected="<%= user.parkId%>">
                 <option style="display:none"> -- select park --</option>

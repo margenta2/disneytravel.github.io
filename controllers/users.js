@@ -12,7 +12,6 @@ const renderSignup = (req, res) => {
 
 
 const signup = (req, res) => {
-    console.log(req.body)
     User.create(req.body)
     .then(newUser => {
         res.redirect(`users/profile/${newUser.id}`);
@@ -35,27 +34,25 @@ const login = (req, res) => {
     })
 }
 
-const renderProfile = (req,res) => {
+const renderProfile = (req, res) => {
     User.findByPk(req.params.index)
-    .then(userProfile => {
-        console.log(userProfile)
-        Hotel.findAll()
-        .then(allHotels => {
+        .then(userProfile => {
+            Hotel.findAll()
+            .then(allHotels => {
             Park.findAll()
             .then(allParks => {
                 res.render('users/profile.ejs', {
                     user: userProfile,
                     hotels: allHotels,
                     parks: allParks
+                    })
                 })
             })
+
         })
-       
-    })
 }
 
 
-//Do I need to put index.ejs here?
 const renderHotels = (req,res) => {
     res.render('/index.ejs')
 }
@@ -66,7 +63,7 @@ const renderParks = (req,res) => {
 
 
 const editProfile = (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
     User.update(req.body, {
         where: {
             id: req.params.index

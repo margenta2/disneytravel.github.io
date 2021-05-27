@@ -1,8 +1,75 @@
-*, *::before, *::after {
+* {
     box-sizing: border-box;
 
 }
 
+@font-face {
+    font-family: disneyFont;
+    src: url('NewWaltDisneyUi-8YdA.ttf');
+}
+
 body {
     background-color: #76d0c0;
+    font-family: 'Baloo 2', cursive;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .hotel-container {
+    background-color: #fbbe4f;
+
+
+} */
+
+.hotels {
+    background-color: #4a62d8;
+    border-style: groove;
+    border-color: #fbbe4f;
+    border-width: 10px;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    color: #fbbe4f;
+    font-size: 22px;
+}
+
+.hotel-header {
+    text-align: center;
+    font-family: disneyFont;
+    font-size: large;
+    color: #4a62d8;
+}
+
+.btn {
+    text-decoration: none;
+    border-style: groove;
+    border-width: 7px;
+    border-color: #4a62d8;
+    background-color: #fbbe4f;
+    color: #4a62d8;
+}
+
+#hotel-btn {
+    text-decoration: center;
+    padding: 2px;
+    margin: 10px;
+    justify-content: center;
+}
+
+.parks {
+    background-color: #4a62d8;
+    border-style: groove;
+    border-color: #fbbe4f;
+    border-width: 10px;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    color: #fbbe4f;
+    font-size: 22px;
+}
+
+.park-header {
+    text-align: center;
+    color: #4a62d8;
+    font-size: 30px;
 }
