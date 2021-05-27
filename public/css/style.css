@@ -23,7 +23,7 @@ body {
     border-style: groove;
     border-color: #fbbe4f;
     border-width: 10px;
-    margin: 5px;
+    margin: 10px 20px;
     padding: 10px;
     text-align: center;
     color: #fbbe4f;
@@ -35,6 +35,7 @@ body {
     font-size: 36px;
     color: #fbbe4f;
     background-color: #8f3985;
+    margin: 10px 20px;
 }
 
 .btn {
@@ -60,7 +61,7 @@ body {
     border-style: groove;
     border-color: #fbbe4f;
     border-width: 10px;
-    margin: 5px;
+    margin: 20px;
     padding: 10px;
     text-align: center;
     color: #fbbe4f;
@@ -69,8 +70,12 @@ body {
 
 .park-header {
     text-align: center;
-    color: #4a62d8;
+    color: #fbbe4f;
+    background-color: #8f3985;
     font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
 }
 
 .disneyHome {
@@ -81,7 +86,9 @@ body {
 }
 
 .home-btn {
-    margin: 20 px;
+    margin: 10px 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .home-container {
@@ -96,4 +103,10 @@ body {
 
 .profile-form {
     margin: 10px;
+}
+
+#park-btn {
+    display: flex;
+    justify-content: center;
+    margin: 10px 20px;
 }
