@@ -10,13 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Sign Up</h1>
+    <h1 class="signup-header">Sign Up</h1>
 
     <form class="signup-form" action='/users' method="POST">
-        Name: <input type="text" name="name" /> <br> <br>
-        Username: <input type="text" name="username" /> <br> <br>
-        Password: <input type="password" name="password" /> <br> <br>
-        <input type="submit" value="Sign Up"/>
+        Name: <input type="text" name="name" placeholder="Enter your Name" class="signup-field" />
+        Username: <input type="text" name="username" placeholder="Enter a Username" class="signup-field" />
+        Password: <input type="password" name="password" placeholder="Enter a Password" class="signup-field" />
+        <input type="submit" value="Sign Up" class="signup-submit" />
     </form>
 </body>
 </html>
