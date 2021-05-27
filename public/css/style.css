@@ -4,13 +4,9 @@
 
 }
 
-@font-face {
-    font-family: disneyFont;
-    src: url('NewWaltDisneyUi-8YdA.ttf');
-}
 
 body {
-    background-image: url("../../images/disney-background.jpg");
+    background-image: url("../../images/disneytsum.png");
     font-family: 'Baloo 2', cursive;
     display: flex;
     flex-direction: column;
@@ -61,6 +57,7 @@ body {
     justify-content: center;
 }
 
+/* Parks Page Styling */
 
 .parks {
     background-color: #4a62d8;
@@ -83,6 +80,14 @@ body {
     justify-content: center;
     margin: 20px;
 }
+
+#park-btn {
+    display: flex;
+    justify-content: center;
+    margin: 10px 20px;
+}
+
+/* Index Page */
 
 .disneyHome {
     text-align: center;
@@ -111,20 +116,44 @@ img.castle {
     width: 100%;
 }
 
+/* Login Page */
+
 .login-container {
     display: flex;
     justify-content: center;
 }
 
-.profile-form {
-    margin: 10px;
+/* Profile Page */
+
+.profile-header {
+    background-color: #8f3985;
+    color: #fbbe4f;
+    font-size: 30px;
+    text-align: center;
 }
 
-#park-btn {
+a.profile-btn {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
     margin: 10px 20px;
 }
+
+.profile-form {
+    margin: 10px;
+    background-color: #4a62d8;
+    color: #fbbe4f;
+    border: 10px groove #fbbe4f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+
+/* Sign Up Page */
 
 .signup-header {
     text-align: center;
