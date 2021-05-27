@@ -41,7 +41,7 @@
                                 <% } %>
             </select>
         </div>
-
+    
         <div class="myPark">
             <label>My Disney Park</label>
             <select type="dropdown" name="parkId" placeholder="Select your Park" selected="<%= user.parkId%>">
@@ -59,7 +59,7 @@
                                 <% } %>
             </select>
         </div>
-        <input type="submit" value="Submit Changes" />
+        <input type="submit" value="Submit Changes" class="profile-submit"/>
     </form>
     <br>
     <form class="profile-form" action="/users/<%=user.id%>?_method=DELETE" method="POST">
