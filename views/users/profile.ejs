@@ -11,7 +11,8 @@
     <h1>Welcome <%=user.name%></h1>
 
     <nav>
-        <a href="/users/profile/<%=user.id%>/trip">My Disney Trip</a>
+        <a href="../hotels">Explore Hotels</a>
+        <a href="../parks">Explore Parks</a>
     </nav>
 
     <form action="/users/profile/<%=user.id%>?_method=PUT" method="POST">
