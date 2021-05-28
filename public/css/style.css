@@ -119,8 +119,40 @@ img.castle {
 /* Login Page */
 
 .login-container {
+    background-color: #4a62d8;
+    color: #fbbe4f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 20px;
+    padding: 10px;
+    font-size: 24px;
+    border: 10px groove #fbbe4f;
+    
+}
+
+.login-header {
+    text-align: center;
+    color: #fbbe4f;
+    background-color: #8f3985;
+    font-size: 30px;
     display: flex;
     justify-content: center;
+    margin: 20px;
+}
+
+.login-submit {
+    background: #1ab28a;
+    border: 2px solid #fbbe4f;
+    color: #8f3985;
+    font-family: 'Baloo 2', cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.login-submit:hover {
+    border-color: #8f3985;
 }
 
 /* Profile Page */
@@ -138,6 +170,7 @@ a.profile-btn {
     justify-content: center;
     text-align: center;
     margin: 10px 20px;
+    
 }
 
 .profile-form {
@@ -148,17 +181,47 @@ a.profile-btn {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 5px;
 
 }
 
 .myHotel {
-    margin: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .myPark {
     margin: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
+.profile-submit {
+    background: #1ab28a;
+    border: 2px solid #fbbe4f;
+    color: #8f3985;
+    font-family: 'Baloo 2', cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile-submit:hover {
+    border-color: #8f3985;
+}
+
+.profile-delete {
+    background: #1ab28a;
+    border: 2px solid #fbbe4f;
+    color: #8f3985;
+    font-family: 'Baloo 2', cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.profile-delete:hover {
+    border-color: #8f3985; 
+}
 
 /* Sign Up Page */
 
