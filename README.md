@@ -21,7 +21,7 @@
 * Give user ability to add dates and display customized itinerary
 
 ### Wireframe
-![Wireframe](./public/images/Wireframe.png "Wireframe")
+![Wireframe](./public/images/wireframe.png "Wireframe")
 
 ### ERD
 ![ERD](./public/images/ERD.png "ERD")
