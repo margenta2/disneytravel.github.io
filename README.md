@@ -48,4 +48,5 @@ This is an application to help a user plan their trip to Disney World. They will
 * GA Instructors(Thank you Leo!)
 * GA Lesson Repositories
 * [Guide to FlexBox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [Background Image](https://i.pinimg.com/originals/29/21/e4/2921e4567ffda58a5eb74a5671c97f96.png)
 
