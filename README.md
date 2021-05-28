@@ -3,6 +3,9 @@
 ### Link to the App
 [Disney App](https://margenta2.github.io/disneytravel.github.io/)
 
+### Description
+This is an application to help a user plan their trip to Disney World. They will be able to review hotel and park details and select a hotel and park for their profile.
+
 ### Technologies Used
 * Express
 * Node JS
