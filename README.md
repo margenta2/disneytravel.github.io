@@ -21,10 +21,17 @@
 * Give user ability to add dates and display customized itinerary
 
 ### Wireframe
+<<<<<<< HEAD
 ![Wireframe](./images/Wireframe.png "Wireframe")
 
 ### ERD
 ![ERD](./images/ERD.png "ERD")
+=======
+![Wireframe](https:\disneytravel.github.io\public\images\wireframe.png "Wireframe")
+
+### ERD
+![ERD]()
+>>>>>>> c49e58744d18e02be8b1960aae2e4c08fb00b4bd
 
 ### Installation Instructions
 1. Fork and clone project repository
